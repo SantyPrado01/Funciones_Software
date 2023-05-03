@@ -31,6 +31,14 @@ def rectaPerpendicular (a,b):
 
 
 
+def recta(a,b):
+    if a > 0:
+        pendiente = 'Creciente'
+    else:
+        pendiente = 'Decreciente'
 
-
+    raiz = (a * -1 ) / b
+    print('Corte en X = ' + str(raiz))
+    print('Corte en Y = ' + str(a))
+    print('Pendiente = ' + str(pendiente))
     

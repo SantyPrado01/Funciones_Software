@@ -34,12 +34,14 @@ while bandera == 0:
         print('Estas en la opcion uno, elige dos numeros uno sera el coeficiente principal y otro el termino independiente, luego generare 3 rectas paralelas y 3 perpendiculares.')
         
         cPrincipal = int(input('Ingresa el coeficiente principal: '))
-        if cPrincipal == 0:
+        while cPrincipal == 0:
             print('El coeficiente principal tiene que ser mayor a cero, ingresa un numero mayor a cero')
             cPrincipal = int(input('Ingresa el coeficiente principal: '))
+        tIndependiente = int(input('Ingresa el termino independiente: '))
         
         tIndependiente = int(input('Ingresa el termino independiente: '))
         
+        print('--------------------------------------------------------')
         print("La condicion de paralelismo es que el coheficiente principal se mantenga y el termino independiente sea el que cambie. \nEjemplos de ecuaciones con rectas paralelas a la dada son:")
         rectaParalela(cPrincipal,tIndependiente)
         print('--------------------------------------------------------')
@@ -51,7 +53,15 @@ while bandera == 0:
                              
     elif opcion == 2:
         bandera = 1
-        print('Estas en la opcion 1')
+        print('Estas en la opcion dos')
+        cPrincipal = int(input('Ingresa el coeficiente principal: '))
+        if cPrincipal == 0:
+            print('El coeficiente principal tiene que ser mayor a cero, ingresa un numero mayor a cero')
+            cPrincipal = int(input('Ingresa el coeficiente principal: '))
+        
+        tIndependiente = int(input('Ingresa el termino independiente: '))
+        
+        recta(cPrincipal,tIndependiente)
     elif opcion == 3:
         bandera = 1
         print('Estas en la opcion 1')
