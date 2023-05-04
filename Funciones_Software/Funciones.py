@@ -60,7 +60,7 @@ def parabola(a,b,c):
     
     if (b*b - 4*a*c) < 0:
         print("La parábola no tiene soluciones reales.")
-    elif (b*b - 4*a*c)== 0:
+    elif (b*b - 4*a*c) == 0:
         x = -b / (2*a)
         print("La parábola toca el eje x en un solo punto: " + str(x)) #Como el discriminante es 0 se reduce la expresion para calcular la raiz
     else:
@@ -78,4 +78,4 @@ def parabola(a,b,c):
         print("Si a es igual a 0 la funcion no es cuadratica")            
         print("El corte con el eje y es: ",c )
     
-parabola(3,8,3)
+parabola(4,-2,6)

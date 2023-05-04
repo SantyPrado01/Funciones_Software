@@ -15,7 +15,8 @@
 #Se deberá mostrar por pantalla la siguiente información: corte con el eje x, corte con el eje y, comportamiento de la recta (creciente o decreciente).
 
 #Análisis de una parábola. En esta opción el usuario deberá ingresar por teclado el coeficiente principal, el coeficiente lineal y 
-# el término independiente. Se deberá mostrar por pantalla la siguiente  información: corte con el eje x, corte con el eje y, 
+# el término independiente. 
+# Se deberá mostrar por pantalla la siguiente  información: corte con el eje x, corte con el eje y, 
 # intervalo de crecimiento e intervalo de decrecimiento, coordenadas del vértice, concavidad de la parábola 
 # (cóncava hacia arriba o cóncava hacia abajo). Además deberá informarse en el caso que la parábola no posea soluciones 
 # reales como así también cuando la solución tenga doble multiplicidad.
@@ -59,11 +60,11 @@ while True:
                 print("La condicion de perpendicularidad es que la pendiente debe ser inversa y opuesta, el termino independiente puede cambiar o no hacerlo. \nEjemplos de ecuacion con rectas perpendiculares a la dada son:")
                 rectaPerpendicular(cPrincipal, tIndependiente)
                 print('-_' * 45 )
-                break
+    
                 
             else:
                 
-                print('Tienes que ingresar un numero, intena nuevamente')
+                print('Tienes que ingresar un numero, intena nuevamente')            
     
 #Final de la Opcion 1
             
@@ -88,7 +89,6 @@ while True:
                     cPrincipal = float(input('Ingresa el coeficiente principal: '))
         
                 recta(cPrincipal,tIndependiente)
-                break
             else:
                 
                 print('Tienes que ingresar un numero, intenta nuevamente')
