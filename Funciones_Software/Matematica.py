@@ -28,10 +28,8 @@ from Funciones import *
 while True:
     opcion = input('Bienvenido al Programa \n Ingrese 1 - Para rectas paralelas y perpendiculares a una dada \n Ingrese 2 - Para analisis de una Funcion Lineal \n Ingrese 3 - Para Analisis de una funcion cuadratica \n Que opcion deseas realizar? :')
     
-    if esNumero(opcion):
-        
+    if esNumero(opcion) == True:
         opcion = int(opcion)
-
 #Comienzo de la Opcion 1
 
         if opcion == 1:
@@ -61,7 +59,6 @@ while True:
                 rectaPerpendicular(cPrincipal, tIndependiente)
                 print('-_' * 45 )
     
-                
             else:
                 
                 print('Tienes que ingresar un numero, intena nuevamente')            
@@ -87,7 +84,10 @@ while True:
                 while cPrincipal == 0:
                     print('El coeficiente principal tiene que ser mayor a cero, ingresa un numero mayor a cero')
                     cPrincipal = float(input('Ingresa el coeficiente principal: '))
-        
+                while tIndependiente == 0:
+                    print('El termino independiente tiene que ser mayor a cero, ingrese un numero mayor a cero')
+                    cPrincipal = float(input('Ingrese el termino independiente: '))
+                    
                 recta(cPrincipal,tIndependiente)
             else:
                 
@@ -108,12 +108,15 @@ while True:
             if esNumero(cPrincipal) and esNumero(cLineal) and esNumero(tIndependiente):
                 cPrincipal = float(cPrincipal)
                 cLineal = float(cLineal)
-                tIndependiente = float(tIndependiente)    
+                tIndependiente = float(tIndependiente)
+                while cPrincipal == 0:
+                    print('El coeficiente principal tiene que ser mayor a cero, ingresa un numero mayor a cero')
+                    cPrincipal = float(input('Ingresa el coeficiente principal: '))    
                 parabola(cPrincipal, cLineal,tIndependiente)
                     
             else:
-                print('Tienes que ingresar un numero, intenta nuevamente')    
-              
+                print('Tienes que ingresar un numero, intenta nuevamente') 
+                          
     else:
+        print('-_' * 45)
         print('Opcion No programada, intente nuevamente')
-        

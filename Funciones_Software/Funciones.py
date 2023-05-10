@@ -3,12 +3,12 @@ from fractions import Fraction
 from math import sqrt
 
 def esNumero(a):
-    try:
-        float(a)
-        return True
-    except ValueError:
-        return False
+    if a.isnumeric():
+        a = int(a)
+        return(True)
 
+    else:
+        return(False)
 
 def rectaParalela(a,b):
     cont = 0
