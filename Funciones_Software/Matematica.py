@@ -100,7 +100,7 @@ while True:
         elif opcion == 3:
  
             print('Estas en la opcion 3')
-        
+            print('-_' * 45)
             cPrincipal = input('Ingresa el coeficiente principal: ')
             cLineal = input('Ingresa el coeficiente lineal: ')
             tIndependiente = input('Ingresa el termino independiente: ')

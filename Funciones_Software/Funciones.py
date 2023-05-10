@@ -78,4 +78,3 @@ def parabola(a,b,c):
         print("Si a es igual a 0 la funcion no es cuadratica")            
         print("El corte con el eje y es: ",c )
     
-parabola(4,-2,6)
