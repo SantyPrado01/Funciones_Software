@@ -12,7 +12,7 @@ while True:
         opcion = int(opcion)
         
         if opcion == 1 or opcion == 2:
-            
+            os.system('clear')
             print('=' * 45)
             
             print('Estás en la opción ' + str(opcion) + '. Elige dos números. Uno será el coeficiente principal y el otro será el término independiente.')
@@ -42,6 +42,7 @@ while True:
                     break
                         
             if opcion == 1:
+                os.system('clear')
                 print('=' * 45)
                 print("La condición de paralelismo entre dos rectas es que el coeficiente principal se mantenga y el término independiente cambie. \nEjemplos de ecuaciones con rectas paralelas a la dada son:")
                 rectaParalela(cPrincipal,tIndependiente)
@@ -54,6 +55,7 @@ while True:
                 print('=' * 45 )
                            
             elif opcion == 2:
+                os.system('clear')
                 while True:
                     try:
                         recta(cPrincipal,tIndependiente)
@@ -64,6 +66,7 @@ while True:
                         break
                     
         elif opcion == 3:
+            os.system('clear')
             print('=' * 45)          
             print('Estás en la opción 3. Elige tres números. Uno será el coeficiente principal, el segundo será el coeficiente lineal y el tercero será el término independiente.')
             print('=' * 45)
@@ -105,6 +108,7 @@ while True:
      
                  
     else:
+        os.system('clear')
         print('=' * 45)
         print('Opción No programada, intente nuevamente')
         print('=' * 45)
