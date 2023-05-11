@@ -68,8 +68,8 @@ def recta(a,b):
         pendiente = 'Horizontal'
 
     if a != 0:
-        raiz = -b/a
-        print('Corte en X = ' + str(raiz))
+        x = -b/a
+        print('Corte en X = ' + str(x))
     else:
         print('La recta es paralela al eje Y y no tiene corte en X')
 
@@ -84,7 +84,7 @@ def parabola(a,b,c):
         
     elif (b*b - 4*a*c) == 0:
         
-        x = -b / (2*a)
+        x = -b / (2*a) #Eje de Simetria
         print("La parábola toca el eje x en un solo punto: " + str(x)) #Como el discriminante es 0 se reduce la expresion para calcular la raiz
         
     else:
@@ -96,11 +96,11 @@ def parabola(a,b,c):
         
     if a>0:
         print ("La parábola es concava hacia arriba")
-        print(f"El intervalo de decrecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/2*float(a))},y de crecimiento desde {'{0:.2f}'.format(float(-b)/2*float(a))} al Infinito. ")
+        print(f"El intervalo de decrecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/(2*float(a)))},y de crecimiento desde {'{0:.2f}'.format(float(-b)/(2*float(a)))} al Infinito. ")
     elif a<0:
             print ("La parábola en concava hacia abajo")
-            print(f"El intervalo de crecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/2*float(a))}, y de decrecimiento desde {'{0:.2f}'.format(float(-b)/2*float(a))} al Infinito.")      
+            print(f"El intervalo de crecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/(2*float(a)))}, y de decrecimiento desde {'{0:.2f}'.format(float(-b)/(2*float(a)))} al Infinito.")      
     else:
         print("Si 'a' es igual a 0 la función no es cuadratica")            
-        print("El corte con el eje y es: ",c )
+        print("El corte con el eje 'y' es: ",c )
     

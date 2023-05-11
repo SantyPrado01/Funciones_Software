@@ -24,7 +24,6 @@ while True:
                     a = (input('Ingrese el coeficiente principal:'))
                     cPrincipal = Fraction(a)   
                     if cPrincipal == 0:
-                        print('El coeficiente principal tiene que ser mayor a cero, intenta nuevamente.')
                         continue
                 except ValueError:
                     print('Ingreso invalido, ingrese un numero')
@@ -74,7 +73,7 @@ while True:
                     a = (input('Ingrese el coeficiente principal:'))
                     cPrincipal = Fraction(a)
                     if cPrincipal == 0:
-                        print('El coeficiente principal tiene que ser mayor a cero, intenta nuevamente.')
+                        print('El coeficiente principal tiene que ser distinto a cero, intenta nuevamente.')
                         continue     
                 except ValueError:
                     print('Ingreso invalido, ingrese un numero')
