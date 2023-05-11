@@ -24,7 +24,7 @@ def rectaParalela(a,b):
         print('y = ' + str(a)+'x + ' + str(i))
         
 
-def rectaPerpendicular (a,b):
+def rectaPerpendicular2 (a,b):
     cont = 0 
     num_CoeficienteP= []
     
@@ -41,23 +41,40 @@ def rectaPerpendicular (a,b):
         cambiando_pendiente = -1 / pendiente
         print('Cambiando la pendiente: y = ' + str(cambiando_pendiente) + ' X + ' + str(b) )
 
-
-
+def rectaPerpendicular(a,b):
+    cont = 0
+    num_Independientes = []
+    while cont < 3:
+        num_random = random.randint(-20,20)
+        if num_random != num_Independientes and num_random != b and num_random != 0:
+           num_Independientes.append(num_random)
+           cont +=1
+    cambiando_pendiente = -1 / a     
+    for i in num_Independientes:
+        print('y = ' + str(cambiando_pendiente)+'x + ' + str(i))
+        
+        
+        
 def recta(a,b):
     # y = ax + b
     # 0 = ax + b
     # x = -b/a
-    
+
     if a > 0:
         pendiente = 'Creciente'
-    else:
+    elif a < 0:
         pendiente = 'Decreciente'
+    else:
+        pendiente = 'Horizontal'
 
-    raiz = (a * -1 ) / b
-    print('Corte en X = ' + str(raiz))
-    print('Corte en Y = ' + str(a))
+    if a != 0:
+        raiz = -b/a
+        print('Corte en X = ' + str(raiz))
+    else:
+        print('La recta es paralela al eje Y y no tiene corte en X')
+
+    print('Corte en Y = ' + str(b))
     print('Pendiente = ' + str(pendiente))
-
 
 def parabola(a,b,c):
     
@@ -78,12 +95,12 @@ def parabola(a,b,c):
         print('Las soluciones de la ecuación son: \n x1= ' + "{0:.2f}".format(float(x1)), ' \n x2= ' + "{0:.2f}".format(float(x2)))
         
     if a>0:
-        print ("La parabola es concava hacia arriba")
-        print(f"El intervalo de decrecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/2*float(a))},y de crecimiento desde {'{0:.2f}'.format(float(-b)/2*float(a))} al Infinito ")
+        print ("La parábola es concava hacia arriba")
+        print(f"El intervalo de decrecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/2*float(a))},y de crecimiento desde {'{0:.2f}'.format(float(-b)/2*float(a))} al Infinito. ")
     elif a<0:
-            print ("La parabola en concava hacia abajo")
-            print(f"El intervalo de crecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/2*float(a))}, y de decrecimiento desde {'{0:.2f}'.format(float(-b)/2*float(a))} al Infinito")      
+            print ("La parábola en concava hacia abajo")
+            print(f"El intervalo de crecimiento es del infinito hasta {'{0:.2f}'.format(float(-b)/2*float(a))}, y de decrecimiento desde {'{0:.2f}'.format(float(-b)/2*float(a))} al Infinito.")      
     else:
-        print("Si 'a' es igual a 0 la funcion no es cuadratica")            
+        print("Si 'a' es igual a 0 la función no es cuadratica")            
         print("El corte con el eje y es: ",c )
     
