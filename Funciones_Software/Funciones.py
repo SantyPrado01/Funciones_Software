@@ -9,8 +9,6 @@ def esNumero(a):
     else:
         return(False)
 
- 
-
 
 def rectaParalela(a,b):
     cont = 0
@@ -103,4 +101,48 @@ def parabola(a,b,c):
     else:
         print("Si 'a' es igual a 0 la función no es cuadratica")            
         print("El corte con el eje 'y' es: ",c )
+
+
+
+
+
+
+def sucesion_aritmetica(a, b, c):
+    sucesion = []
+    for i in range(c):
+        termino = a + (i*b)
+        sucesion.append(termino)
+    if sucesion[i]> a:
+        print(f'La sucesion es creciente, el primer termino de la sucesión es: {a}, su diferencia es de: {b} y la sucesión es: ')
+        x = 0
+        for i in sucesion:
+            x += 1
+            print(f'valor {x}: {i}')
+    else:
+        print(f'La sucesion es decreciente, el primer termino de la sucesión es: {a}, su diferencia es de: {b} y la sucesión es: {sucesion}')
+        x = 0
+        for i in sucesion:
+            x += 1
+            print(f'valor {x}: {i}')
     
+
+def sucesion_geometrica(a, b, c):
+    sucesion = []
+    for i in range(c):
+        termino = a * (b**i)
+        sucesion.append(termino)
+    if sucesion[i]> a:
+        print(f'La sucesion es creciente, el primer termino de la sucesión es: {a}, su razón es: {b} y la sucesión es: {sucesion}')
+        x = 0
+        for i in sucesion:
+            x += 1
+            print(f'valor {x}: {i}')
+    else:
+        print(f'La sucesion es decreciente, el primer termino de la sucesión es: {a}, su razón es: {b} y la sucesión es: {sucesion}')
+        x = 0
+        for i in sucesion:
+            x += 1
+            print(f'valor {x}: {i}')
+
+
+

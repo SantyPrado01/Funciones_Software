@@ -2,10 +2,12 @@ import random
 import os
 from Funciones import *
 
+fin = True
 
-while True:
+while fin == True:
+    os.system('clear')
     print('=' * 45)
-    opcion = input('Bienvenido al Programa \n Ingrese 1 - Para rectas paralelas y perpendiculares a una dada \n Ingrese 2 - Para análisis de una Función Lineal \n Ingrese 3 - Para análisis de una función cuadrática \n ¿Qué opción deseas realizar?: ')
+    opcion = input('Bienvenido al Programa \n Ingrese 1 --> Para rectas paralelas y perpendiculares a una dada \n Ingrese 2 --> Para análisis de una Función Lineal \n Ingrese 3 --> Para análisis de una función cuadrática\n Ingrese 4 --> Sucesiones aritméticas\n Ingrese 5 --> Sucesiones geométricas \n Ingrese 6 --> salir del sistema.\n¿Qué opción deseas realizar?: ')
    
     if esNumero(opcion) == True:
         
@@ -83,7 +85,7 @@ while True:
                     continue
                 else:
                     break
-                
+          
             while True:
                 try:
                     b = (input('Ingrese el coeficiente lineal:'))
@@ -105,8 +107,44 @@ while True:
                     break
                             
             parabola(cPrincipal, cLineal, tIndependiente)
-     
-                 
+            
+        elif opcion == 4:
+            os.system('clear')
+            print('Sucesiones aritmeticas: Una sucesión es aritmética cuando cada término se obtiene sumando un número al término que le precede.\nLa fórmula de una sucesión aritmética se expresa de la siguiente manera: an = a₁ + (n - 1) * d')
+            while True:
+                try:
+                    termino_general = input('Ingrese el término general: ')
+                    diferencia = input('Ingrese la diferencia: ')
+                    terminos_conocer = int(input('Ingrese la cantidad de terminos que quiere conocer de la sucesión: '))
+                    a = Fraction(termino_general)
+                    b = Fraction(diferencia)
+                    sucesion_aritmetica(a, b, terminos_conocer)
+                except ValueError:
+                    print('Ingreso invalido, intente nuevamente.')
+                    continue
+                else:
+                    break
+            input("Presiona Enter para continuar...")
+
+        elif opcion == 5: 
+            os.system('clear')
+            print('Sucesion geométrica: Una sucesión geométrica o es una sucesión en la que cada término "an" se obtiene multiplicando al término anterior "an-1" por un número llamado razón.\nLa fórmula de una sucesión geométrica se expresa de la siguiente manera: an = a₁ * (n - 1) ** r')
+            while True:
+                try:
+                    termino_general = float(input('Ingrese el término general: '))
+                    razon = float(input('Ingrese la razón (La razón de una sucesión geométrica se denota por r y debe ser constante en toda la sucesión): '))
+                    terminos_conocer = int(input('Ingrese la cantidad de terminos que quiere conocer de la sucesión: '))
+                    sucesion_geometrica(termino_general, razon, terminos_conocer)
+                except ValueError:
+                    print('Ingreso invalido, intente nuevamente.')
+                    continue
+                else:
+                    break
+            input("Presiona Enter para continuar...")
+        elif opcion == 6:
+            fin = False 
+            print('Gracias por usar nuestro sistema')
+
     else:
         os.system('clear')
         print('=' * 45)
