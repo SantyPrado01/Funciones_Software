@@ -76,7 +76,7 @@ def recta(a,b):
 
 def parabola(a,b,c):
     
-    if (b*b - 4*a*c) < 0:
+    if (b**b - 4*a*c) < 0:
         
         print("La parábola no tiene soluciones reales.")
         
