@@ -76,7 +76,7 @@ def recta(a,b):
 
 def parabola(a,b,c):
     
-    if (b**b - 4*a*c) < 0:
+    if (b*b - 4*a*c) < 0:
         
         print("La parábola no tiene soluciones reales.")
         
@@ -118,8 +118,15 @@ def sucesion_aritmetica(a, b, c):
         for i in sucesion:
             x += 1
             print(f'valor {x}: {i}')
+            
+    elif sucesion [i]<a:
+        print(f'La sucesion es decreciente, el primer termino de la sucesión es: {a}, su diferencia es de: {b} y la sucesión es: ')
+        x = 0
+        for i in sucesion:
+            x += 1
+            print(f'valor {x}: {i}')
     else:
-        print(f'La sucesion es decreciente, el primer termino de la sucesión es: {a}, su diferencia es de: {b} y la sucesión es: {sucesion}')
+        print(f'La sucesion es alternante, el primer termino de la sucesión es: {a}, su diferencia es de: {b} y la sucesión es: ')
         x = 0
         for i in sucesion:
             x += 1
@@ -132,17 +139,22 @@ def sucesion_geometrica(a, b, c):
         termino = a * (b**i)
         sucesion.append(termino)
     if sucesion[i]> a:
-        print(f'La sucesion es creciente, el primer termino de la sucesión es: {a}, su razón es: {b} y la sucesión es: {sucesion}')
+        print(f'La sucesion es creciente, el primer termino de la sucesión es: {a}, su razón es: {b} y la sucesión es: ')
+        x = 0
+        for i in sucesion:
+            x += 1
+            print(f'valor {x}: {i}')
+    elif sucesion [i]<a:
+        print(f'La sucesion es decreciente, el primer termino de la sucesión es: {a}, su razón es: {b} y la sucesión es: ')
         x = 0
         for i in sucesion:
             x += 1
             print(f'valor {x}: {i}')
     else:
-        print(f'La sucesion es decreciente, el primer termino de la sucesión es: {a}, su razón es: {b} y la sucesión es: {sucesion}')
+        print(f'La sucesion es alternante, el primer termino de la sucesión es: {a}, su diferencia es de: {b} y la sucesión es: ')
         x = 0
         for i in sucesion:
             x += 1
             print(f'valor {x}: {i}')
-
 
 
